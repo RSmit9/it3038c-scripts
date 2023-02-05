@@ -1,0 +1,8 @@
+ Function Lab3{
+>> write-output "This PC's IP adress is ";
+(get-netipaddress).ipv4address | select-string "192.168.71*";
+Write-output "the date today is";
+get-date -format "MM/dd/yyyy";
+write-output "the hostname is"; hostname;write-output "the username is";
+$env:UserName;write-output "The powershell version is"; $host.version.major}    
+write-host(Lab3)
