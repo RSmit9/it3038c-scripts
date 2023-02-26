@@ -1,0 +1,20 @@
+print ("Weekly Budget Creator")
+print ("please input data when prompted")
+CSAB = int(input("Current Spending Account Balance: "))
+BDBS= int(input("Bills Due By Sunday($ Amount): "))
+Income = int(input(" Income earned by Sunday: "))
+spending = float(input(" Enter the portion of your weekly income you want to spend as a decimal: "))
+
+Allowance = Income * spending 
+if Income <= BDBS:
+    Allowance = 0
+    print ("you have too many bils due and have no allowence this week")
+    
+AccBalBeforeBills = CSAB + Income 
+AccBalAfterBills = AccBalBeforeBills - BDBS - Allowance
+
+
+print ("Your allowence for this week is $ ",Allowance)
+print ("You will have $" ,AccBalAfterBills, "on sunday after you pay your bills.")
+if AccBalAfterBills <= 0:
+    print ("WARING WITH THE CURRENT NUMBERS YOU WILL OVER DRAW YOUR ACCOUNT, EITHER TRANSFER MONEY OR GET ANOTHER JOB!!")
