@@ -9,7 +9,7 @@ def hello():
 
 @app.route('/')
 def hello():
-   #name = 'Wes'
+   #name = 'Riley'
    return render_template("index.html", value=name)
 
 @app.route('/welcome', methods=['POST'])
